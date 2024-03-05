@@ -9,14 +9,15 @@
 void selection_sort(int *array, size_t size)
 {
 	int store;
-	size_t f = 0, b = size - 1, h;
+	size_t f = 0, b, h;
 
 	if (!array || !size)
 		return;
 
 	while (f < (size - 1))
 	{
-		h = f +1;
+		h = f + 1;
+		b = size - 1;
 		while (b > f)
 		{
 			if (array[b] < array[h])
