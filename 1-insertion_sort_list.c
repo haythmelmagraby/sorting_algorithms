@@ -29,6 +29,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (!*list || !list || !(*list)->next)
 		return;
+
 	i = (*list)->next;
 	while (i)
 	{
@@ -45,6 +46,6 @@ void insertion_sort_list(listint_t **list)
 				print_list((const listint_t *) *list);
 			}
 		}
-		i = i->next;
+	i = i->next;
 	}
 }
