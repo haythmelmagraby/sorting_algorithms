@@ -11,14 +11,15 @@ void selection_sort(int *array, size_t size)
 	int store;
 	size_t f = 0, b = size - 1, h;
 
-	if (!array || size)
+	if (!array || !size)
 		return;
 
 	while (f < (size - 1))
 	{
+		h = f +1;
 		while (b > f)
 		{
-			if (array[f] < array[b])
+			if (array[b] < array[h])
 				h = b;
 			b--;
 		}
