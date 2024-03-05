@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * swap_node: to swap nodes
+ * swap_node- to swap nodes
  * @first: the fisrt node to be second
  * @second: second node to be first
  */
