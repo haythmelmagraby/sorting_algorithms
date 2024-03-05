@@ -6,15 +6,15 @@
  */
 void swap_node(listint_t *first, listint_t *second)
 {
-	first->next = second->next;
-	second->prev = first->prev;
-	first->prev = second;
-	second->next = first;
-
 	if (first->prev)
 		first->prev->next = second;
 	if (second->next)
 		second->next->prev = first;
+
+	first->next = second->next;
+	second->prev = first->prev;
+	first->prev = second;
+	second->next = first;
 }
 /**
  *insertion_sort_list-  sorts a doubly linked list of
