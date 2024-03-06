@@ -27,7 +27,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *i, *c;
 
-	if (!*list || !list || !(*list)->next)
+	if (!list || !*list || !(*list)->next)
 		return;
 
 	i = (*list)->next;
@@ -36,15 +36,15 @@ void insertion_sort_list(listint_t **list)
 		c = i;
 		while (c && c->prev)
 		{
-			if (c->n > c->prev->n)
-				c = c->prev;
-			else
+			if (c->n < c->prev->n)
 			{
 				swap_node(c->prev, c);
 				if (!c->prev)
 					*list = c;
 				print_list((const listint_t *) *list);
 			}
+			else
+				c = c->prev;
 		}
 	i = i->next;
 	}
